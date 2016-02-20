@@ -187,6 +187,13 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    seed-fu (2.3.5)
+      activerecord (>= 3.1, < 4.3)
+      activesupport (>= 3.1, < 4.3)
+    seed_dump (3.2.4)
+      activerecord (>= 4)
+      activesupport (>= 4)
+    seedbank (0.3.0)
     shellany (0.0.1)
     slop (3.6.0)
     spring (1.6.3)
@@ -234,6 +241,9 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  seed-fu
+  seed_dump
+  seedbank
   spring
   spring-commands-rspec
   sqlite3

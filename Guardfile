@@ -9,6 +9,12 @@ guard :shell do
     `cat db/schemas/#{m[1].split('_').last}.schema`
   end
 
+  watch(%r{^db/seeds/(.+)\.seeds.rb$}) do |m|
+    `rake db:seed:#{m[1].split(File::Separator).join(':')}`
+    `rake db:seed:dump EXCLUDE=created_at,updated_at FILE=tmp/db/dump.rb`
+    `cat tmp/db/dump.rb`
+  end
+
   watch(/(.*).pdf/) {|m| `open #{m[0]}` }
 end
 

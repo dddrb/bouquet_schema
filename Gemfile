@@ -53,4 +53,7 @@ gem 'guard-rspec', require: false, group: [:development]
 gem 'guard-shell', require: false, group: [:development]
 gem 'ridgepole', group: [:development]
 gem 'rails-erd', group: [:development]
+gem 'seedbank', group: [:development, :test]
+gem 'seed_dump', group: [:development, :test]
+gem 'seed-fu', group: [:development, :test]
 

@@ -45,3 +45,12 @@ group :development do
   gem 'spring'
 end
 
+gem 'pry-rails', group: [:development, :test]
+gem 'factory_girl_rails', group: [:development, :test]
+gem 'rspec-rails', group: [:development, :test]
+gem 'spring-commands-rspec', group: [:development]
+gem 'guard-rspec', require: false, group: [:development]
+gem 'guard-shell', require: false, group: [:development]
+gem 'ridgepole', group: [:development]
+gem 'rails-erd', group: [:development]
+

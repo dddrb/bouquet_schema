@@ -1,0 +1,9 @@
+create_table "assemblies", force: :cascade do |t|
+  t.integer  "product_id"
+  t.integer  "material_id"
+  t.datetime "created_at",  null: false
+  t.datetime "updated_at",  null: false
+end
+
+add_index "assemblies", ["material_id"], name: "index_assemblies_on_material_id"
+add_index "assemblies", ["product_id"], name: "index_assemblies_on_product_id"

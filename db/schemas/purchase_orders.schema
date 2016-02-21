@@ -1,0 +1,12 @@
+create_table "purchase_orders", force: :cascade do |t|
+  t.string   "state"
+  t.date     "date"
+  t.integer  "quantity"
+  t.integer  "material_id"
+  t.integer  "supplier_id"
+  t.datetime "created_at",  null: false
+  t.datetime "updated_at",  null: false
+end
+
+add_index "purchase_orders", ["material_id"], name: "index_purchase_orders_on_material_id"
+add_index "purchase_orders", ["supplier_id"], name: "index_purchase_orders_on_supplier_id"

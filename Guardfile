@@ -6,7 +6,7 @@ guard :shell do
     `rake db:seed`
     `rake erd`
     `ridgepole -c config/database.yml --export --split --output db/schemas/schema.rb`
-    `cat db/schemas/#{m[1].split('_').last}.schema`
+    `cat db/schemas/#{m[1].split('_create_').last}.schema`
   end
 
   watch(%r{^db/seeds/(.+)\.seeds.rb$}) do |m|

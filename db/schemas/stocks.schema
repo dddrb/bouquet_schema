@@ -1,0 +1,12 @@
+create_table "stocks", force: :cascade do |t|
+  t.string   "state"
+  t.date     "date"
+  t.integer  "quantity"
+  t.integer  "arrival_id"
+  t.integer  "location_id"
+  t.datetime "created_at",  null: false
+  t.datetime "updated_at",  null: false
+end
+
+add_index "stocks", ["arrival_id"], name: "index_stocks_on_arrival_id"
+add_index "stocks", ["location_id"], name: "index_stocks_on_location_id"

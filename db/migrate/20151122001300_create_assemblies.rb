@@ -3,6 +3,7 @@ class CreateAssemblies < ActiveRecord::Migration
     create_table :assemblies do |t|
       t.references :product, index: true, foreign_key: true
       t.references :material, index: true, foreign_key: true
+      t.integer :quantity
 
       t.timestamps null: false
     end
